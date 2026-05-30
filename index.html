@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ブラジルポルトガル語 学習アプリ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <header class="hero">
+      <h1>ブラジルポルトガル語 学習アプリ</h1>
+      <p>
+        参考書で文法を理解し、ドリル形式の自作問題で復習するアプリです。
+      </p>
+    </header>
+
+    <section class="panel">
+      <label for="unitSelect">学習項目</label>
+      <select id="unitSelect"></select>
+
+      <div class="actions">
+        <button id="modeAll">全問モード</button>
+        <button id="modeWrong">間違い復習</button>
+        <button id="resetProgress">記録リセット</button>
+      </div>
+    </section>
+
+    <section id="stats" class="stats"></section>
+
+    <section class="card">
+      <div id="meta" class="meta"></div>
+      <h2 id="prompt"></h2>
+
+      <div id="choices" class="choices"></div>
+
+      <input
+        id="answerInput"
+        class="answer-input hidden"
+        type="text"
+        autocomplete="off"
+        placeholder="答えを入力"
+      />
+
+      <button id="checkAnswer" class="primary hidden">答える</button>
+
+      <div id="result" class="result"></div>
+
+      <button id="nextQuestion" class="primary hidden">次の問題へ</button>
+    </section>
+
+    <section class="note">
+      <h2>教材データの作り方</h2>
+      <p>
+        書籍の文章や問題を写さず、文法項目を参考にして、自分で例文・問題・解説を作ります。
+      </p>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
